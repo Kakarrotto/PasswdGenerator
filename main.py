@@ -24,6 +24,9 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
+# Start password lenght
+svalue = 8
+
 class App(QWidget):
     def __init__(self, parent=None):
         super(App, self).__init__(parent)
@@ -61,6 +64,7 @@ class App(QWidget):
         self.slider.setTickInterval(5)
         self.slider.setMinimum(1)
         self.slider.setMaximum(26)
+        self.slider.setValue(8)
         layoutv.addWidget(self.slider)
         self.slider.valueChanged.connect(self.slidervalue)
 
